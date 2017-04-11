@@ -20,10 +20,10 @@ class ConfigHelper():
         server_ip = ""
         error_string = ""
 
-        server_group = os.environ["SERVER_GROUP"] = ""
+        server_group = os.environ["SERVER_GROUP"] = "<server_group>"
         server_group_temp = \
-            os.environ["SERVER_GROUP_TEMP"] = ""
-        server_ip = os.environ["SERVER_IP"] = ""
+            os.environ["SERVER_GROUP_TEMP"] = "<server_group_temp>"
+        server_ip = os.environ["SERVER_IP"] = "<server_ip>"
 
         # check configuration
         if server_group == EMPTY:
