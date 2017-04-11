@@ -12,6 +12,7 @@ script:
   - sed -i -e "s/<server_group>/UnitTest/" ../../halo_api_examples/config_helper.py
   - sed -i -e "s/<server_group_temp>/UnitTestTemp/" ../../halo_api_examples/config_helper.py
   - sed -i -e "s/<server_ip>/54.153.14.175/" ../../halo_api_examples/config_helper.py
+  - cat ../../halo_api_examples/config_helper.py
   - python test_server_group_methods.py
   - python test_server_methods.py
 env:
