@@ -9,7 +9,9 @@ class ConfigHelper():
     def __init__(self):
         ERROR = 1
         NEWLINE = "\n"
-        EMPTY = ""
+        SERVER_GROUP_DEFAULT = "<server_group>"
+        SERVER_GROUP_TEMP_DEFAULT = "<server_group_temp>"
+        SERVER_IP_DEFAULT = "<server_ip>"
 
         self.halo_key = os.getenv("HALO_API_KEY")
         self.halo_secret = os.getenv("HALO_API_SECRET_KEY")
@@ -26,15 +28,16 @@ class ConfigHelper():
         server_ip = os.environ["SERVER_IP"] = "<server_ip>"
 
         # check configuration
-        if server_group == EMPTY:
+        if server_group == SERVER_GROUP_DEFAULT:
             error_string = "Environment variable SERVER_GROUP is empty"
-        elif server_group_temp == EMPTY:
+        elif server_group_temp == SERVER_GROUP_TEMP_DEFAULT:
             error_string = "Environment variable SERVER_GROUP_TEMP is empty"
-        elif server_ip == EMPTY:
+        elif server_ip == SERVER_IP_DEFAULT:
             error_string = "Environment variable SERVER_IP is empty"
 
-        if server_group == EMPTY or server_group_temp == EMPTY \
-                or server_ip == EMPTY:
+        if server_group == SERVER_GROUP_DEFAULT or \
+                        server_group_temp == SERVER_GROUP_TEMP_DEFAULT \
+                or server_ip == SERVER_IP_DEFAULT:
             print "Invalid configuration: %s... Exiting...%s" % (error_string,
                                                                  NEWLINE)
             sys.exit(ERROR)
