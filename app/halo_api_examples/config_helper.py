@@ -17,9 +17,6 @@ class ConfigHelper():
         self.halo_secret = os.getenv("HALO_API_SECRET_KEY")
 
         # server groups used in examples
-        server_group = ""
-        server_group_temp = ""
-        server_ip = ""
         error_string = ""
 
         server_group = os.environ["SERVER_GROUP"] = "<server_group>"
@@ -27,6 +24,10 @@ class ConfigHelper():
             os.environ["SERVER_GROUP_TEMP"] = "<server_group_temp>"
         server_ip = os.environ["SERVER_IP"] = "<server_ip>"
 
+        print server_group
+        print server_group_temp
+        print server_ip
+        
         # check configuration
         if server_group == SERVER_GROUP_DEFAULT:
             error_string = "Environment variable SERVER_GROUP is empty"
