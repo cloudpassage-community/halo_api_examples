@@ -5,9 +5,9 @@ cache: pip
 install:
   - pip install cloudpassage
 script:
+  - git clone https://github.com/jgibbons-cp/halo_general.git
   - cd app/test/unit/
   - python test_config_helper.py
-  - git clone https://github.com/jgibbons-cp/halo_general.git
   - python test_server_group_methods.py
 env:
   global:
