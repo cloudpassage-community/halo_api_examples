@@ -13,6 +13,7 @@ script:
   - sed -i -e "1,/<server_ip>/s/<server_ip>/54.153.14.175/" ../../halo_api_examples/config_helper.py
   - python test_server_group_methods.py
   - python test_server_methods.py
+  - ifonfig
 env:
   global:
   # halo
