@@ -11,6 +11,8 @@ install:
   - pip install cloudpassage
   - pip install flake8
 script:
+  - lsb_release -a
+  - lr
   # install the Halo agent
   # update apt repositories 
   - sudo apt-get update > /dev/null
