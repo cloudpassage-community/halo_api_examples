@@ -13,13 +13,20 @@ class ConfigHelper():
         SERVER_GROUP_TEMP_DEFAULT = "<server_group_temp>"
         SERVER_IP_DEFAULT = "<server_ip>"
 
+        print SERVER_GROUP_DEFAULT
+
         self.halo_key = os.getenv("HALO_API_KEY")
         self.halo_secret = os.getenv("HALO_API_SECRET_KEY")
 
         # server groups used in examples
         error_string = ""
 
+        print SERVER_GROUP_DEFAULT
+
         server_group = os.environ["SERVER_GROUP"] = "<server_group>"
+
+        print SERVER_GROUP_DEFAULT
+        
         server_group_temp = \
             os.environ["SERVER_GROUP_TEMP"] = "<server_group_temp>"
         server_ip = os.environ["SERVER_IP"] = "<server_ip>"
