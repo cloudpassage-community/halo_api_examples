@@ -24,10 +24,10 @@ class ConfigHelper():
             os.environ["SERVER_GROUP_TEMP"] = "<server_group_temp>"
         server_ip = os.environ["SERVER_IP"] = "<server_ip>"
 
-        print server_group
+        print "%s %s" % (server_group, SERVER_GROUP_DEFAULT)
         print server_group_temp
         print server_ip
-        
+
         # check configuration
         if server_group == SERVER_GROUP_DEFAULT:
             error_string = "Environment variable SERVER_GROUP is empty"
