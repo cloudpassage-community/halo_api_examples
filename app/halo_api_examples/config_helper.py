@@ -22,6 +22,8 @@ class ConfigHelper():
             os.environ["SERVER_GROUP_TEMP"] = "<server_group_temp>"
         server_ip = os.environ["SERVER_IP"] = "<server_ip>"
 
+        # sed replaces teh defaults above once starting at line one
+        # thus declaration here so no dependencies on line numbers
         SERVER_GROUP_DEFAULT = "<server_group>"
         SERVER_GROUP_TEMP_DEFAULT = "<server_group_temp>"
         SERVER_IP_DEFAULT = "<server_ip>"
