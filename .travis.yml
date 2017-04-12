@@ -40,10 +40,10 @@ script:
   - git clone https://github.com/jgibbons-cp/halo_general.git
   
   # run style test
+  - cd app/test/style/
   - python test_style_flake8.py
 
   # run unit tests
-  - cd app/test/style/
   - cd ../unit/
   - python test_config_helper.py
   
