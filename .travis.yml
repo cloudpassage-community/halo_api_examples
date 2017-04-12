@@ -7,6 +7,18 @@ install:
   - sudo apt-get install dnsutils
   - pip install cloudpassage
 script:
+  # update apt repositories 
+  - sudo apt-get update > /dev/null
+  # install curl 
+  - sudo apt-get -y install curl
+  # add CloudPassage repository 
+  - echo 'deb https://production.packages.cloudpassage.com/debian debian main' | sudo tee /etc/apt/sources.list.d/cloudpassage.list > /dev/null
+  # import CloudPassage public key 
+  - curl https://production.packages.cloudpassage.com/cloudpassage.packages.key | sudo apt-key add -
+  # update apt repositories 
+  - sudo apt-get update > /dev/null
+  # install the agent 
+  - sudo apt-get -y install cphalo
   - git clone https://github.com/jgibbons-cp/halo_general.git
   - cd app/test/unit/
   - python test_config_helper.py
