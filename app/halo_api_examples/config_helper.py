@@ -37,7 +37,7 @@ class ConfigHelper():
             error_string = "Environment variable SERVER_IP is empty"
 
         if server_group == SERVER_GROUP_DEFAULT or \
-                        server_group_temp == SERVER_GROUP_TEMP_DEFAULT \
+                server_group_temp == SERVER_GROUP_TEMP_DEFAULT \
                 or server_ip == SERVER_IP_DEFAULT:
             print "Invalid configuration: %s... Exiting...%s" % (error_string,
                                                                  NEWLINE)
