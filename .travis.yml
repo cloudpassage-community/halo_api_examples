@@ -1,8 +1,10 @@
 language: python
+sudo: required
 python:
   - "2.7"
 cache: pip
 install:
+  - sudo apt-get install dnsutils
   - pip install cloudpassage
 script:
   - git clone https://github.com/jgibbons-cp/halo_general.git
