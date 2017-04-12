@@ -9,7 +9,7 @@ cache: pip
 install:
   - sudo apt-get install dnsutils
   - pip install cloudpassage
-
+  - pip install flake8
 script:
   # install the Halo agent
   # update apt repositories 
