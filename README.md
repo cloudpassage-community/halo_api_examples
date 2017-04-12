@@ -9,16 +9,16 @@ A) Install the CloudPassage SDK
 2) Configure the SDK
 1) Type: sudo vi /etc/cloudpassage.yaml
 
-defaults:
-  key_id: <key>
-  secret_key: <secret>
-  api_hostname: api.cloudpassage.com
-  api_port: 443
+defaults:  
+  key_id: <key>  
+  secret_key: <secret>  
+  api_hostname: api.cloudpassage.com  
+  api_port: 443  
 
 or
 
-export HALO_API_KEY=<key>
-export HALO_API_SECRET_KEY=<secret>
+export HALO_API_KEY=<key>  
+export HALO_API_SECRET_KEY=<secret>  
 export HALO_API_HOSTNAME=api.cloudpassage.com
 
 Project Configuration
@@ -56,22 +56,22 @@ This is the project configuration as noted above in section "Project Configurati
 
 This includes Halo ServerGroup examples.
 
-A) Create the primary Halo server group and output server group name and ID
-B) Get the server ID
-C) Move the host we will use for the examples to the primary server group
-D) Create the secondary Halo server group and output server group name and ID
-E) Call list all server groups and print details of the first one
-F) Get the first server group details and output active, deactivated, missing and total servers in the group
+A) Create the primary Halo server group and output server group name and ID  
+B) Get the server ID  
+C) Move the host we will use for the examples to the primary server group  
+D) Create the secondary Halo server group and output server group name and ID  
+E) Call list all server groups and print details of the first one  
+F) Get the first server group details and output active, deactivated, missing and total servers in the group  
 G) Get all servers in a group and list active servers by FQDN
 
 3) Server - location: app/halo_api_examples/server_group/server.py
 
 This includes Halo ServerGroup examples.
 
-A) Get all servers in the account and print them out by FQDN
-B) Print the server we will use in the examples (the server in the primary server group)
-C) Move the server to the secondary group using describe server
-D) Move the server back to the primary group using describe server
+A) Get all servers in the account and print them out by FQDN  
+B) Print the server we will use in the examples (the server in the primary server group)  
+C) Move the server to the secondary group using describe server  
+D) Move the server back to the primary group using describe server  
 
 4) HaloApiExamples - location: app/halo_api_examples/halo_api_examples.py
 
