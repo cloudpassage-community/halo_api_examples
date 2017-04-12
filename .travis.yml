@@ -8,9 +8,9 @@ script:
   - git clone https://github.com/jgibbons-cp/halo_general.git
   - cd app/test/unit/
   - python test_config_helper.py
-  - sed -i -e "1s/<server_group>/UnitTest/" ../../halo_api_examples/config_helper.py
-  - sed -i -e "1s/<server_group_temp>/UnitTestTemp/" ../../halo_api_examples/config_helper.py
-  - sed -i -e "1s/<server_ip>/54.153.14.175/" ../../halo_api_examples/config_helper.py
+  - sed -i -e "1,/<server_group>/s/<server_group>/UnitTest/" ../../halo_api_examples/config_helper.py
+  - sed -i -e "1,/<server_group_temp>/s/<server_group_temp>/UnitTestTemp/" ../../halo_api_examples/config_helper.py
+  - sed -i -e "1,/<server_ip>/s/<server_ip>/54.153.14.175/" ../../halo_api_examples/config_helper.py
   - python test_server_group_methods.py
   - python test_server_methods.py
 env:
