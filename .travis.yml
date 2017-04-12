@@ -28,7 +28,7 @@ script:
   - python test_config_helper.py
   - sed -i -e "1,/<server_group>/s/<server_group>/UnitTest/" ../../halo_api_examples/config_helper.py
   - sed -i -e "1,/<server_group_temp>/s/<server_group_temp>/UnitTestTemp/" ../../halo_api_examples/config_helper.py
-  - server_ip = $(dig +short myip.opendns.com @resolver1.opendns.com)
+  - server_ip=$(dig +short myip.opendns.com @resolver1.opendns.com)
   - sed -i -e "1,/<server_ip>/s/<server_ip>/$server_ip/" ../../halo_api_examples/config_helper.py
   - python test_server_group_methods.py
   - python test_server_methods.py
