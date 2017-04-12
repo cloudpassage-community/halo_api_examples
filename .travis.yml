@@ -13,10 +13,10 @@ script:
   - sed -i -e "s/<server_group_temp>/UnitTestTemp/" ../../halo_api_examples/config_helper.py
   - sed -i -e "s/<server_ip>/54.153.14.175/" ../../halo_api_examples/config_helper.py
   - cat ../../halo_api_examples/config_helper.py
-  - export SERVER_GROUP=one
   - python test_server_group_methods.py
   - python test_server_methods.py
 env:
+  - SERVER_GROUP=one
   global:
   # halo
   - secure: "BOgUHEmdFNHMuf+kdQ+N783SyQkuIKIcgB+HxLOskCkqkuEGqZ7FFZtONMxDolVm9hk5VgrNJLAdP68OuOyrQgrc5dQHzasbOAbz7MkoAxqWmMnIOJhP2SnA5WTONXGlp9u/ES5fPPBhvxCS2q1oOpZ2YP7ZMl9AHqX7p+4OH/VoRGxrysx9h7Da6JYFIuwr+F7iDY+ImPySGtksEdaHIGiLafj0FcKfWMEYW1fDelLT9M1ZJf33RKM8fk86NKBdJQiRA0zt0ENGkUs950P2sLQsSwzpuNw5SF6f7jYXfKezf1lND4LevMi38fWqPNbc//iVu7VZoG+mj9dYnwffIpy5tLPXgLQOSoOIUkE5ivdYkl3evVKALaSqU1X+846MVP51JHZfQN5P6mLMxJQBGrdIHV+m2QXFIh7k1PtFJnpQK46dcmPQYAuDeyMGYdq7CCv9n0xW7+7cQkMKwz9anFEXqKwFggs+99y85p+o+/Og1wC7bWY+jvLJ7G/fqxPsekkN52PciG/c8n7RSY/nGWlnpnG45Oi80GeXpxvMneyWvZgETTzKRHSRd7bu+B1vNFaBB8Zx3ZudfxynG0P10zBGLfLqRVjDZ0AOSxCvJQY7QJewU85N+XerqQjZMUVYMlimoar0ikVgYpyKn0ojxWRJcKxXVVegH/dLyCQD7CI="
