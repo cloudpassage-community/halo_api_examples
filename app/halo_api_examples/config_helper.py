@@ -16,11 +16,11 @@ class ConfigHelper():
         # server groups used in examples
         error_string = ""
 
-        server_group = os.environ["SERVER_GROUP"] = "One"
+        server_group = os.environ["SERVER_GROUP"] = "<server_group>"
 
         server_group_temp = \
-            os.environ["SERVER_GROUP_TEMP"] = "Two"
-        server_ip = os.environ["SERVER_IP"] = "52.53.212.50"
+            os.environ["SERVER_GROUP_TEMP"] = "<server_group_temp>"
+        server_ip = os.environ["SERVER_IP"] = "<server_ip>"
         os.environ["POLICY_DIRECTORY_PATH"] = "%s/policy/" % os.getcwd()
         os.environ["CSM_POLICY_NAME"] = "CIS_Benchmark_forUbuntu_12.04_v1.json"
         os.environ["CLEAN_UP"] = "False"
