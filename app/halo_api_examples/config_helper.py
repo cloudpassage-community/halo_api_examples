@@ -16,13 +16,14 @@ class ConfigHelper():
         # server groups used in examples
         error_string = ""
 
-        server_group = os.environ["SERVER_GROUP"] = "<server_group>"
+        server_group = os.environ["SERVER_GROUP"] = "One"
 
         server_group_temp = \
-            os.environ["SERVER_GROUP_TEMP"] = "<server_group_temp>"
-        server_ip = os.environ["SERVER_IP"] = "<server_ip>"
-        os.environ["POLICY_DIRECTORY_PATH"] = "%s/../../policy/" % os.getcwd()
+            os.environ["SERVER_GROUP_TEMP"] = "Two"
+        server_ip = os.environ["SERVER_IP"] = "52.53.212.50"
+        os.environ["POLICY_DIRECTORY_PATH"] = "%s/policy/" % os.getcwd()
         os.environ["CSM_POLICY_NAME"] = "CIS_Benchmark_forUbuntu_12.04_v1.json"
+        os.environ["CLEAN_UP"] = "False"
 
         # sed replaces teh defaults above once starting at line one
         # thus declaration here so no dependencies on line numbers
@@ -32,9 +33,11 @@ class ConfigHelper():
 
         # check configuration
         if server_group == SERVER_GROUP_DEFAULT:
-            error_string = "Environment variable SERVER_GROUP is not configured"
+            error_string = "Environment variable SERVER_GROUP is not " \
+                           "configured"
         elif server_group_temp == SERVER_GROUP_TEMP_DEFAULT:
-            error_string = "Environment variable SERVER_GROUP_TEMP is not configured"
+            error_string = "Environment variable SERVER_GROUP_TEMP is not " \
+                           "configured"
         elif server_ip == SERVER_IP_DEFAULT:
             error_string = "Environment variable SERVER_IP is not configured"
 
